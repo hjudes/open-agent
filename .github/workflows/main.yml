@@ -1,0 +1,19 @@
+name: Sincronizar Fork Automaticamente
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Se ejecuta de forma automatica todos los dias a la medianoche
+  workflow_dispatch: # Te permite activarlo manualmente con un boton cuando quieras
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sincronizar con el original
+        uses: tgymnich/fork-sync@v2.0.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: master # Tu rama destino
+          head: master # La rama del creador original
+          owner: AFK-surf # El usuario original
+          repo: open-agent # El repositorio original
