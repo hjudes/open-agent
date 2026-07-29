@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Sincronizar con el original
-        uses: tgymnich/fork-sync@v2.0.1
+        uses: tgymnich/fork-sync@v2.0.10
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: master # Tu rama destino
