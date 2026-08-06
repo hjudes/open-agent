@@ -1,8 +1,8 @@
 name: Sincronizar Fork Automaticamente
 
 on:
-  schedule:
-    - cron: '0 0 * * *' # Se ejecuta de forma automatica todos los dias a la medianoche
+  # schedule:
+  #   - cron: '0 0 * * *' # Se ejecuta de forma automatica todos los dias a la medianoche
   workflow_dispatch: # Te permite activarlo manualmente con un boton cuando quieras
 
 jobs:
